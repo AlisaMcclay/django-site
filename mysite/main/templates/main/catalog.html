@@ -1,0 +1,14 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+Ассортимент
+{% endblock %}
+
+{% block content %}
+    <h1>Каталог товаров</h1>
+    {% for el in books %}
+        <h3>{{ el.name }}</h3>
+        <p>{{ el.author }}</p>
+        <p>Цена: {{ el.price }} р.</p>
+    {% endfor %}
+{% endblock %}

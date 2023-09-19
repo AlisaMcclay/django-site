@@ -1,0 +1,14 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+Список магазинов
+{% endblock %}
+
+{% block content %}
+    <h1>Список магазинов</h1>
+    {% for el in shops %}
+        <h3>{{ el.title }}</h3>
+        <p>{{ el.shop }}</p>
+        <p>{{ el.phone }}</p>
+    {% endfor %}
+{% endblock %}
